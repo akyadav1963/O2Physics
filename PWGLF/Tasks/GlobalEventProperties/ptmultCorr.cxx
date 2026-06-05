@@ -40,7 +40,6 @@
 #include <TH2.h>
 #include <TH3.h>
 
-
 #include <algorithm>
 #include <chrono>
 #include <cmath>
@@ -95,7 +94,7 @@ enum {
   kGenKaon,
   kGenProton,
   kGenOther,
-  kGenAllCharged,   // all charged particles (primaries + secondaries) — denominator for primary fraction
+  kGenAllCharged, // all charged particles (primaries + secondaries) — denominator for primary fraction
   kGenTrkTypeend
 };
 
@@ -130,7 +129,7 @@ AxisSpec axisPhi{{0, o2::constants::math::PIQuarter, o2::constants::math::PIHalf
 AxisSpec axisPhi2{629, 0, o2::constants::math::TwoPI, "#phi"};
 AxisSpec axisCent{100, 0, 100, "#Cent"};
 AxisSpec axisDeltaPt{50, -1.0, +1.0, "#Delta(pT)"};
-AxisSpec axisDCAxy{100, -3.0, 3.0, "DCA_{xy} (cm)", "DCAxyAxis"};   // range ±3 cm for TPC-only case
+AxisSpec axisDCAxy{100, -3.0, 3.0, "DCA_{xy} (cm)", "DCAxyAxis"}; // range ±3 cm for TPC-only case
 AxisSpec axisGenPtVary = {kGenpTend - 1, +kGenpTbegin + 0.5, +kGenpTend - 0.5, "", "GenpTVaryAxis"};
 // axisGenTrkType auto-expands: kGenTrkTypeend is now 8, giving 6 bins (kGenAll … kGenAllCharged)
 AxisSpec axisGenTrkType = {kGenTrkTypeend - 1, +kGenTrkTypebegin + 0.5, +kGenTrkTypeend - 0.5, "", "GenTrackTypeAxis"};
